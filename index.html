@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nika Sky</title>
+
+  <style>
+    :root {
+      --background: #CAE1FF;
+      --primary: #191970;
+      --accent: #63B8FF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--primary);
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(100% - 40px, 1100px);
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 0;
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      max-width: 900px;
+
+      font-family: Montserrat, Arial Black, sans-serif;
+      font-style: italic;
+      font-weight: 900;
+
+      font-size: clamp(3.4rem, 10vw, 8rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+
+      color: var(--primary);
+    }
+
+    .roles {
+      max-width: 700px;
+      margin: 0;
+
+      font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+      line-height: 1.6;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 42px;
+    }
+
+    .links a {
+      display: inline-block;
+
+      padding: 13px 20px;
+      border: 2px solid var(--primary);
+      border-radius: 999px;
+
+      background: transparent;
+      color: var(--primary);
+
+      font-weight: 700;
+      text-decoration: none;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .links a:focus-visible,
+    footer a:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 4px;
+    }
+
+    .design-line {
+      width: 100%;
+      height: 18px;
+      margin: 30px 0 70px;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    .portfolio {
+      padding: 20px 0 80px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-item {
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--accent);
+
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 30px 0 45px;
+      border-top: 2px solid var(--primary);
+
+      font-size: 16px;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        width: min(100% - 28px, 1100px);
+      }
+
+      .hero {
+        min-height: 72vh;
+        padding: 45px 0;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 17vw, 5.5rem);
+      }
+
+      .links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .links a {
+        text-align: center;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item {
+        min-height: 360px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="hero">
+
+      <h1>Nika Sky</h1>
+
+      <p class="roles">
+        Content Creator · Model · Speaker · Moderator ·
+        Adaptive Fashion Advocate
+      </p>
+
+      <nav class="links" aria-label="Social Media und Kontakt">
+        <a href="https://www.instagram.com/2.5hands/ ">Instagram</a>
+        <a href="https://www.tiktok.com/@2.5hands?_t=8ldLSWTfTVY&_r=1 ">TikTok</a>
+        <a href="https://www.youtube.com/@2.5hands/featured">YouTube</a>
+        <a href="https://de.linkedin.com/in/nika-sky-631327406">LinkedIn</a>
+        <a href="mailto:contact@nikasky.de">E-Mail</a>
+      </nav>
+
+    </section>
+
+    <div class="design-line"></div>
+
+    <section class="portfolio">
+      <div class="portfolio-grid">
+        <div class="portfolio-item">BILD 1</div>
+        <div class="portfolio-item">BILD 2</div>
+        <div class="portfolio-item">BILD 3</div>
+        <div class="portfolio-item">BILD 4</div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© Nika Sky</span>
+
+      <div>
+        <a href="impressum.html">Impressum</a>
+        &nbsp;&nbsp;
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
